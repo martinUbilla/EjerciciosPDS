@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class EmpleadoDAO implements IEmpleadoDAO {
     ArrayList<Empleado> empleados = new ArrayList<Empleado>();
+    Iprint iprint = new Print() ;
     // Aqui se implementa la logica para manejar empleados en memoria o base de datos
     @Override
     public void agregarEmpleado(Empleado empleado) {
