@@ -1,7 +1,7 @@
 public class EmpleadoTiempoParcial extends Empleado {
     private int horasTrabajadas ;
-    public EmpleadoTiempoParcial(String nombre, String puesto , double salario , int horasTrabajadas) {
-        super(nombre , puesto , salario );
+    public EmpleadoTiempoParcial(String nombre, String puesto , double salario ,int id, int horasTrabajadas) {
+        super(nombre , puesto , salario ,id);
         this . horasTrabajadas = horasTrabajadas ;
     }
     public int getHorasTrabajadas() {

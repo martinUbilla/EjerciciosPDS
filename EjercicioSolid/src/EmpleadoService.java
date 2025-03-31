@@ -4,19 +4,15 @@ public class EmpleadoService implements IEmpleadoService {
         this .empleadoDAO = empleadoDAO;
     }
     @Override
-    public void agregarEmpleado(Empleado empleado) {
-        empleadoDAO. agregarEmpleado(empleado );
-    }
-    @Override
-    public Empleado obtenerEmpleado(String nombre) {
-        return empleadoDAO.obtenerEmpleado(nombre);
-    }
-    @Override
-    public void eliminarEmpleado(String nombre) {
-        empleadoDAO. eliminarEmpleado(nombre);
+    public Empleado obtenerEmpleado(int id) {
+        return empleadoDAO.obtenerEmpleado(id);
     }
     @Override
     public void actualizarEmpleado(Empleado empleado) {
         empleadoDAO. actualizarEmpleado(empleado );
     }
+    @Override
+    public void agregarEmpleado(Empleado empleado) {empleadoDAO.agregarEmpleado(empleado);}
+    @Override
+    public void eliminarEmpleado(int id) { empleadoDAO.eliminarEmpleado(id);}
 }

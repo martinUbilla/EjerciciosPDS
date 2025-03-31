@@ -1,6 +1,6 @@
 public interface IEmpleadoService {
-    void agregarEmpleado(Empleado empleado);
-    Empleado obtenerEmpleado(String nombre);
-    void eliminarEmpleado(String nombre);
+    Empleado obtenerEmpleado(int id);
     void actualizarEmpleado(Empleado empleado );
+    void eliminarEmpleado(int id);
+    void agregarEmpleado(Empleado empleado);
 }

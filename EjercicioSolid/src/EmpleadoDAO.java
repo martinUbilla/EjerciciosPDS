@@ -7,13 +7,21 @@ public class EmpleadoDAO implements IEmpleadoDAO {
     // Aqui se implementa la logica para manejar empleados en memoria o base de datos
     @Override
     public void agregarEmpleado(Empleado empleado) {
+        for (Empleado employees : empleados) {
+            if (employees.getId() == empleado.getId()) {
+                iprint.imprimirErrorAgregarEmpleado();
+                return;
+            }
+        }
         empleados.add(empleado);
+
+
         // Implementar
     }
     @Override
-    public Empleado obtenerEmpleado(String nombre) {
+    public Empleado obtenerEmpleado(int id) {
         for (Empleado empleado : empleados) {
-            if (empleado.getNombre().equals(nombre)) {
+            if (empleado.getId()==id) {
                 return empleado;
             }
         }
@@ -21,9 +29,9 @@ public class EmpleadoDAO implements IEmpleadoDAO {
         return null ;
     }
     @Override
-    public void eliminarEmpleado(String nombre) {
+    public void eliminarEmpleado(int id) {
         for (Empleado empleado : empleados) {
-            if (empleado.getNombre().equals(nombre)) {
+            if (empleado.getId()==id) {
                 empleados.remove(empleado);
                 break;
             }
